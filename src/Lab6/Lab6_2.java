@@ -5,10 +5,10 @@ import java.util.*;
 
 public class Lab6_2 {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException {
 		try {
-			File obj = new File("data.txt");
-			Scanner in = new Scanner(obj);
+			File fil = new File("data.txt");
+			Scanner in = new Scanner(fil);
 			int i = 1;
 			while (in.hasNextLine()) {
 				String data = in.nextLine();
