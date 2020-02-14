@@ -5,6 +5,9 @@ abstract class Item {
 	private int identification_number;
 	private String title;
 	private int no_of_copies;
+	Item() {
+		System.out.println("This Is Item Constructor");
+	}
 	public int getIdentification_number() {
 		return identification_number;
 	}
@@ -23,7 +26,9 @@ abstract class Item {
 	public void setNo_of_copies(int no_of_copies) {
 		this.no_of_copies = no_of_copies;
 	}
-	
+	public String toString(){
+		return identification_number + " " + title + " " + no_of_copies;
+	}
 }
 
 public class Lab2_1 extends Item {
@@ -45,6 +50,7 @@ public class Lab2_1 extends Item {
 		System.out.println(obj.getIdentification_number());
 		System.out.println(obj.getTitle());
 		System.out.println(obj.getNo_of_copies());
+		System.out.println(obj);
 		in.close();
 	}
 

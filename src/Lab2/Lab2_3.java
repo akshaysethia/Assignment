@@ -2,58 +2,14 @@ package Lab2;
 
 import java.util.*;
 
-abstract class Item {
-	private int identification_number;
-	private String title;
-	private int no_of_copies;
-
-	public int getIdentification_number() {
-		return identification_number;
-	}
-
-	public void setIdentification_number(int identification_number) {
-		this.identification_number = identification_number;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public int getNo_of_copies() {
-		return no_of_copies;
-	}
-
-	public void setNo_of_copies(int no_of_copies) {
-		this.no_of_copies = no_of_copies;
-	}
-
-}
-
-abstract class WrittenItem extends Item {
-	private String author;
-
-	public String getAuthor() {
-		return author;
-	}
+class Book extends WrittenItem {
 
 	public void setAuthor(String author) {
-		this.author = author;
-	}
-
-}
-
-public class Book extends WrittenItem {
-
-	public void setAuthor(String author) {
-		this.author = author;
+		super.setAuthor(author);
 	}
 }
 
-public class JournalPaper extends WrittenItem {
+class JournalPaper extends WrittenItem {
 	private Date yearpub;
 
 	public Date getYearpub() {
@@ -65,7 +21,7 @@ public class JournalPaper extends WrittenItem {
 	}
 
 	public void setAuthor(String author) {
-		this.author = author;
+		super.setAuthor(author);
 	}
 }
 
